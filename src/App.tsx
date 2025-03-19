@@ -9,7 +9,7 @@ function App() {
         <div className="col-span-12 md:col-span-4 bg-white p-4 rounded-lg border-2 border-zinc-600 shadow-md">
           <SearchInputForm />
         </div>
-        <div className="col-span-12 md:col-span-8 bg-white p-4 rounded-lg border-2 border-zinc-600 shadow-md">
+        <div className="col-span-12 md:col-span-8 bg-white p-4 rounded-lg border-2 border-zinc-600 shadow-md h-full overflow-y-auto">
           <SearchResult />
         </div>
       </div>

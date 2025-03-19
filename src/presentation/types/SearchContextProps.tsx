@@ -1,7 +1,15 @@
 import { SearchUseCase } from "@/app/useCases/search";
 
+export type searchResponse = {
+  word: string;
+  phonetic: string;
+  phonetics: [];
+  origin: string;
+  meanings: [];
+}
+
 export type SearchContextProps = {
   searchUseCase: SearchUseCase;
-  searchContextValue: string;
-  setSearchContextValue: (value: string) => void;
+  searchContextValue: searchResponse[] | null;
+  setSearchContextValue: (value: searchResponse[]) => void;
 };
