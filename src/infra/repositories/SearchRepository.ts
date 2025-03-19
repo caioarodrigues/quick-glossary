@@ -5,13 +5,7 @@ import { DICTIONARY_API_URL } from "@/core/constants/endpoints";
 export class SearchRepository implements ISearchRepository {
   async search(data: SearchData): Promise<string> {
     const endpoint = `${DICTIONARY_API_URL}/${data.word}`;
-    const response = await fetch(endpoint, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(endpoint);
 
     if (!response.ok) {
       throw new Error("Failed to update profile");

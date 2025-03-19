@@ -12,8 +12,10 @@ import {
   FormItem,
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
+import { useSearch } from "../hooks/useSearch";
 
 export function SearchInputForm() {
+  const { setSearchContextValue } = useSearch();
   const form = useForm<SearchData>({
     resolver: zodResolver(searchSchema),
     defaultValues: {
@@ -25,8 +27,8 @@ export function SearchInputForm() {
     try {
       const searchRepository = new SearchRepository();
       const searchUseCase = new SearchUseCase(searchRepository);
-      await searchUseCase.execute(value);
-      console.log("Search successfully done!");
+      const result = await searchUseCase.execute(value);
+      setSearchContextValue(result);
     } catch (error) {
       console.error(error);
     }
@@ -42,7 +44,7 @@ export function SearchInputForm() {
             <FormItem>
               <FormLabel>Quick Glossary App</FormLabel>
               <FormControl>
-                <Input placeholder="Enter a word" />
+                <Input placeholder="Enter a word" {...form.register("word")} />
               </FormControl>
             </FormItem>
           )}
@@ -51,7 +53,6 @@ export function SearchInputForm() {
           Search
         </Button>
       </Form>
-      {/* <input {...form.register("word")} /> */}
     </form>
   );
 }

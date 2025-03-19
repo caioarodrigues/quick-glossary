@@ -4,11 +4,10 @@ import { ISearchRepository } from "@/domain/repositories/ISearchRepository";
 export class SearchUseCase {
   constructor(private searchRepository: ISearchRepository) {}
 
-  async execute(data: SearchData): Promise<string> {
+  async execute(data: SearchData) {
     const parsedData = searchSchema.parse(data);
     const fetchedData = await this.searchRepository.search(parsedData);
 
-    console.log("fetchedData", fetchedData);
     return fetchedData;
   }
 }
