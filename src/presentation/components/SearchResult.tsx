@@ -2,8 +2,6 @@ import { useSearch } from "../hooks/useSearch";
 
 export function SearchResult() {
   const { searchContextValue } = useSearch();
-  console.log("Search Result Page");
-  console.log(searchContextValue);
 
   return (
     <div className="rounded-lg p-2">
