@@ -34,6 +34,10 @@ export function SearchInputForm() {
     }
   }
 
+  function onReset() {
+    setSearchContextValue([]);
+  }
+
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
       <Form {...form}>
@@ -49,9 +53,14 @@ export function SearchInputForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" variant="outline">
-          Search
-        </Button>
+        <div className="flex gap-2">
+          <Button type="submit" variant="outline">
+            Search
+          </Button>
+          <Button type="reset" variant="outline" onClick={onReset}>
+            Reset
+          </Button>
+        </div>
       </Form>
     </form>
   );

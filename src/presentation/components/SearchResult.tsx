@@ -6,9 +6,9 @@ export function SearchResult() {
   console.log(searchContextValue);
 
   return (
-    <div className="bg-zinc-50 rounded-lg p-2">
+    <div className="rounded-lg p-2">
       {searchContextValue && (
-        <h1 className="text-3xl font-bold my-2">{searchContextValue[0].word}</h1>
+        <h1 className="text-3xl font-bold my-2">{searchContextValue[0]?.word}</h1>
       )}
       {searchContextValue?.map(({ word, meanings }, wordIndex) => (
         <div key={wordIndex}>
