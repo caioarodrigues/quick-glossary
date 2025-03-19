@@ -1,6 +1,6 @@
 # Quick Glossary Web App (Clean Architecture with React)
 
-[English](#english) | [Português](#português)
+[English](#english)
 
 ---
 
