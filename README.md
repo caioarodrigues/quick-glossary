@@ -8,6 +8,8 @@ This is a single-page responsive web application built using React and the Clean
 - Displays the definition and related results.
 - Provides a **Reset** button to clear all displayed data.
 
+You can access the website here: https://quick-glossary.netlify.app/
+
 ### Features
 - **Responsive Design:** Optimized for both mobile and desktop screens.
 - **Clean Architecture:** Separation of concerns with clear domain, application, and infrastructure layers.
