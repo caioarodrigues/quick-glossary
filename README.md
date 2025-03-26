@@ -1,10 +1,5 @@
 # Quick Glossary Web App (Clean Architecture with React)
 
-[English](#english)
-
----
-
-## English
 
 ### Overview
 This is a single-page responsive web application built using React and the Clean Architecture approach. It serves as a dictionary frontend that:
@@ -25,8 +20,13 @@ This is a single-page responsive web application built using React and the Clean
 - **Domain Layer:** Business logic related to dictionary operations.
 - **Data Layer:** API use case module handling requests to the Free Dictionary API.
 
-### Setup
+### Setup (without Docker)
+- Node version: 23.8.0
+- NPM version: 10.9.2
+
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/caioarodrigues/quick-glossary.git
    cd quick-glossary
+   npm install 
+   npm run dev
