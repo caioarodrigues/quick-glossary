@@ -46,7 +46,7 @@ export function SearchInputForm() {
           name="word"
           render={() => (
             <FormItem>
-              <FormLabel>Quick Glossary App</FormLabel>
+              <FormLabel className="text-2xl">Quick Glossary App</FormLabel>
               <FormControl>
                 <Input placeholder="Enter a word" {...form.register("word")} />
               </FormControl>
